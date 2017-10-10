@@ -13,7 +13,7 @@ A resource server based on Spring boot 2.0.0M4, OAuth2 and JWT token.
 	
 	1. Save the token value from auth server in a variable named TOKEN and execute
 		curl -H "Authorization: Bearer $TOKEN" "localhost:9000/foo"
-		-It should return the generated token.
+		-It should work fine.
 	2. curl -XPOST -H "Authorization: Bearer $TOKEN" "localhost:9000/foo"
 		- Access Denied as it needs a permission which is not included in the given token
 	3. In authorization server mongo database, add "FOO_WRITE" in authorities of "admin" user, and then again execute
